@@ -1,4 +1,4 @@
-FROM ruby:2.2-slim
+FROM ruby:2.3-slim
 
 MAINTAINER Dru Jensen <drujensen@gmail.com>
 
@@ -6,7 +6,7 @@ MAINTAINER Dru Jensen <drujensen@gmail.com>
 RUN apt-get update -qq
 
 # c libraries needed for most dev libraries
-RUN apt-get install -y build-essential
+RUN apt-get install -y build-essential git tmux
 
 # install latest nodejs packages
 RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
